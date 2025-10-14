@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "imports": {
+    "#root/*": "./*"
+  },
   "scripts": {
-    "start:prod": "NODE_ENV=production node src/app.ts",
-    "start:stage": "NODE_ENV=stage node src/app.ts",
-    "start:local": "NODE_ENV=local node src/app.ts",
-    "dev:prod": "NODE_ENV=production ts-node ./src/app.ts",
-    "dev:stage": "NODE_ENV=stage ts-node ./src/app.ts",
-    "dev:local": "NODE_ENV=local ts-node ./src/app.ts",
+    "start:prod": "NODE_ENV=production npm run build:prod && node ../dist/app.js",
+    "start:stage": "NODE_ENV=stage npm run build:stage && node ../dist/app.js",
+    "start:local": "NODE_ENV=local npm run build:local && node ../dist/app.js",
+    "dev:prod": "NODE_ENV=production ts-node src/app.ts",
+    "dev:stage": "NODE_ENV=stage ts-node src/app.ts",
+    "dev:local": "nodemon",
     "build:prod": "NODE_ENV=production tsc",
     "build:stage": "NODE_ENV=stage tsc",
     "build:local": "NODE_ENV=local tsc",
@@ -26,8 +29,14 @@
   },
   "homepage": "https://github.com/Evolianka/amor_fati_bot#readme",
   "dependencies": {
+    "@grammyjs/parse-mode": "^2.2.0",
+    "@types/crypto-js": "^4.2.2",
+    "app-root-path": "^3.1.0",
+    "crypto-js": "^4.2.0",
     "dotenv": "^17.2.2",
-    "node-telegram-bot-api": "^0.66.0",
+    "grammy": "^1.38.3",
+    "js-image-generator": "^1.0.4",
+    "json-canonicalize": "^2.0.0",
     "unique-username-generator": "^1.5.1"
   },
   "devDependencies": {
@@ -35,12 +44,13 @@
     "@eslint/json": "^0.13.2",
     "@eslint/markdown": "^7.3.0",
     "@types/node": "^24.5.2",
-    "@types/node-telegram-bot-api": "^0.64.11",
     "eslint": "^9.36.0",
     "globals": "^16.4.0",
     "jiti": "^2.6.0",
+    "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
-    "tsc": "^2.0.4",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.1"
   }
 }

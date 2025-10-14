@@ -1,0 +1,30 @@
+{
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "paths": {
+        "@/*": ["./src/*"],
+        "@assets/*": ["./src/assets/*"],
+        "@domain/*": ["./src/domain/*"],
+        "@application/*": ["./src/application/*"],
+        "@infrastructure/*": ["./src/infrastructure/*"],
+        "@interfaces/*": ["./src/interfaces/*"],
+        "@shared/*": ["./src/shared/*"]
+    }
+  }
+}

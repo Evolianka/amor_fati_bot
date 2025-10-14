@@ -1,0 +1,41 @@
+{
+  "ignoreEmpty": {
+    "text": "Пожалуйста, отправьте сообщение с текстом."
+  },
+  "adminsGreeting": {
+    "text": "Привет{{ adminName }}! Расскажи мне, как твои дела? Я очень рад тебя видеть."
+  },
+  "greeting": {
+    "text": "file@message:/ru.greeting"
+  },
+  "details": {
+    "text": "file@message:/ru.details"
+  },
+  "instruction": [
+    {
+      "type": "photo",
+      "media": "file@asset:/instruction.ru.1",
+      "caption": "file@message:/ru.instruction",
+      "show_caption_above_media": true
+    },
+    {
+      "type": "photo",
+      "media": "file@asset:/instruction.ru.2",
+      "show_caption_above_media": true
+    },
+    {
+      "type": "photo",
+      "media": "file@asset:/instruction.ru.3",
+      "show_caption_above_media": true
+    },
+    {
+      "type": "photo",
+      "media": "file@asset:/instruction.ru.4",
+      "show_caption_above_media": true
+    }
+  ],
+
+  "adminsCopyOfUserMessage": {
+    "text": "Новое сообщение от {{ userName }}:\n\n{{ userMessage }}\n\n [Sign: {{ sign }}]"
+  }
+}
